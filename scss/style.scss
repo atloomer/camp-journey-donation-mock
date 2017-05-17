@@ -1,0 +1,670 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:300,400,500');
+// Colors
+$mint: #6bc097;
+$lighter-blue: #7086de;
+$light-blue: #687dd8;
+$medium-blue: #5b72d2;
+$dark-blue: #435bbd;
+$gray: #edeeef;
+$white: #ffffff;
+$black: #000000;
+$black-op: rgba(0,
+0,
+0,
+.65);
+.mobile-menu {
+  background-color: $mint;
+  display: block;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  border-radius: 50% 30% 50% 50%;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 26px;
+  right: 5.5%;
+  overflow: hidden;
+  z-index: 999;
+  transform-origin: top right;
+  transition: all .3s cubic-bezier(0.3, 0, 0, 1.35);
+  .mobile-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    opacity: 0;
+    height: 50vh;
+    transition: .3s cubic-bezier(0.3, 0, 0, 1.5) .25s;
+    li {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      height: auto;
+      a {
+        color: $white;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 300;
+        letter-spacing: 1px;
+        text-align: center;
+        font-size: 1.2em;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        transition: all .3s cubic-bezier(0.3, 0, 0, 1.5) .35s;
+      }
+      .display-links {
+        margin: 10px 0;
+      }
+    }
+  }
+  .display-ul {
+    opacity: 1;
+    height: 100vh;
+  }
+}
+
+.open-mobile-menu {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  top: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  display: block;
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  object-position: top;
+}
+
+.header {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-color: $black-op;
+  .nav-bar {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    h3 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1em;
+      font-weight: 300;
+      text-transform: uppercase;
+      background-color: $mint;
+      color: $white;
+      padding: .5em 1em;
+    }
+    .desk-nav {
+      display: none;
+    }
+    .mobile-nav-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 3em;
+      height: 3em;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid $mint;
+      background-color: $black-op;
+      z-index: 999;
+      span {
+        width: 1.5em;
+        height: 1px;
+        margin: 0 .75em;
+        display: block;
+        position: absolute;
+        background-color: $white;
+        transition: all .3s cubic-bezier(0.3, 0, 0, 1.35);
+        &:before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          display: block;
+          bottom: 5px;
+          position: relative;
+          background-color: inherit;
+        }
+        &:after {
+          content: '';
+          width: 100%;
+          height: 100%;
+          display: block;
+          top: 5px;
+          position: relative;
+          background-color: inherit;
+        }
+      }
+    }
+    .close-btn {
+      position: fixed;
+      right: 5%;
+      top: 1.5em;
+      span {
+        position: fixed;
+        transform: rotate(45deg);
+        &:before {
+          opacity: 0;
+        }
+        &:after {
+          transform: rotate(90deg);
+          top: 0;
+        }
+      }
+    }
+  }
+  .header-content {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    padding: 0 5%;
+    h1 {
+      color: $white;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.1em;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0;
+      font-weight: 700;
+    }
+    h2 {
+      color: $white;
+      font-family: 'Playfair Display', serif;
+      font-size: 1em;
+      line-height: 150%;
+      font-weight: 400;
+      text-align: center;
+    }
+    .link-container {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+      a {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 125px;
+        padding: 10px 0;
+        margin: 5px;
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: .8em;
+        background-color: none;
+        border: 1px solid $white;
+      }
+      .donate-link {
+        background-color: $mint;
+        border: 1px solid $mint;
+      }
+    }
+  }
+}
+
+.donate-now-bar {
+  width: 80%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  background-color: $dark-blue;
+  margin: 0 auto;
+  margin-top: -30px;
+  .quick-donate-title {
+    display: none;
+  }
+  .quick-donate-options {
+    display: none;
+  }
+  form {
+    width: 42%;
+    input {
+      width: 100%;
+      height: 35px;
+      font-size: .6em;
+      letter-spacing: .5px;
+      border: none;
+      background-color: $light-blue;
+      color: $white;
+      font-weight: 300;
+      text-transform: uppercase;
+      padding: 0 0 0 10px;
+      outline: none;
+      border-radius: 0px;
+      &::placeholder {
+        color: $white;
+        opacity: .5;
+      }
+    }
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42%;
+    font-size: .7em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 300;
+    text-align: center;
+    color: $white;
+    background-color: $mint;
+    height: 35px;
+  }
+}
+
+.about {
+  display: block;
+  width: 90%;
+  padding: 50px 5%;
+  background-color: $white;
+  h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 2em;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+  }
+  p {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: $black-op;
+    line-height: 160%;
+    font-size: .9em;
+  }
+}
+
+.donation-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+  padding: 100px 5%;
+  background-color: $gray;
+  .image-container {
+    display: none;
+    .donation-image {
+      display: none;
+    }
+  }
+  .donation-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  h1 {
+    text-align: left;
+    font-weight: 400;
+    font-size: 2em;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding-bottom: 5px;
+  }
+  p {
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color: $black-op;
+    line-height: 160%;
+    font-size: .9em;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    font-size: .7em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 300;
+    text-align: center;
+    color: $white;
+    background-color: $mint;
+    height: 35px;
+    margin-top: 50px;
+  }
+}
+
+.volunteer {
+  display: flex;
+  height: 500px;
+}
+
+@media screen and (min-width:768px) {
+  .background {
+    height: 80vh;
+  }
+  .header {
+    height: 80vh;
+    .header-content {
+      top: 35%;
+      h1 {
+        font-size: 3.3em;
+      }
+      h2 {
+        width: 30%;
+      }
+      .link-container {
+        margin-top: 20px;
+        a {
+          display: flex;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          width: 150px;
+          padding: 12px 0;
+          margin: 5px;
+          color: $white;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-family: 'Roboto', sans-serif;
+          font-weight: 300;
+          font-size: .8em;
+          background-color: none;
+          border: 1px solid $white;
+        }
+        .donate-link {
+          background-color: $mint;
+          border: 1px solid $mint;
+        }
+      }
+    }
+  }
+  
+  .donation-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+  padding: 100px 5%;
+  background-color: $gray;
+  .image-container {
+    display: none;
+    .donation-image {
+      display: none;
+    }
+  }
+  .donation-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    padding: 20px 20%;
+  }
+  h1 {
+    text-align: left;
+    font-weight: 400;
+    font-size: 2em;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding-bottom: 5px;
+  }
+  p {
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color: $black-op;
+    line-height: 200%;
+    font-size: .9em;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    font-size: .7em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 300;
+    text-align: center;
+    color: $white;
+    background-color: $mint;
+    height: 35px;
+    margin-top: 50px;
+  }
+}
+  
+  .about {
+    width: 60%;
+    padding: 100px 20%;
+    h1 {
+      font-weight: 400;
+      font-size: 2.5em;
+      margin: 0 0 30px 0;
+    }
+    p {
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      color: $black-op;
+      line-height: 200%;
+      font-size: 1em;
+    }
+  }
+}
+
+@media screen and (min-width:1000px) {
+    .header {
+    height: 80vh;
+    .nav-bar {
+      width: 70%;
+      .desk-nav {
+        display: flex;
+        ul {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          list-style-type: none;
+          li {
+            a {
+              padding: 20px 10px;
+              font-size: .9em;
+              color: $white;
+              text-decoration: none;
+              text-transform: uppercase;
+              font-family: 'Roboto', sans-serif;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+      .mobile-nav-btn {
+        display: none;
+      }
+    }
+    .header-content {
+      top: 35%;
+      h1 {
+        font-size: 3.3em;
+      }
+      h2 {
+        width: 30%;
+      }
+      .link-container {
+        margin-top: 20px;
+        a {
+          display: flex;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          width: 150px;
+          padding: 12px 0;
+          margin: 5px;
+          color: $white;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-family: 'Roboto', sans-serif;
+          font-weight: 300;
+          font-size: .8em;
+          background-color: none;
+          border: 1px solid $white;
+        }
+        .donate-link {
+          background-color: $mint;
+          border: 1px solid $mint;
+        }
+      }
+    }
+  }
+    .donate-now-bar {
+    width: 70%;
+    height: 90px;
+    margin-top: -45px;
+    .quick-donate-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $dark-blue;
+      width: 20%;
+      h1 {
+        font-size: 1.2em;
+        color: $white;
+        font-family: 'Playfair Display', serif;
+        font-weight: 400;
+      }
+    }
+    .quick-donate-options {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40%;
+      height: 100%;
+      background-color: $light-blue;
+      .checkbox {
+        display: block;
+        width: 1em;
+        height: 1em;
+        background-color: none;
+        border: 1px solid $white;
+        border-radius: 50%;
+        margin: 0 .5em;
+        cursor: pointer;
+      }
+      .checked {
+        background-color: $mint;
+        border: 1px solid $mint;
+        background-image: url('http://www.harshath.com/glass-tester/icons/check.png');
+        background-position: center;
+        background-size: 90%;
+      }
+      p {
+        display: inline-block;
+        color: $white;
+        font-size: .7em;
+        font-weight: 300;
+        font-family: 'Roboto', sans-serif;
+        margin-right: 3.5em;
+      }
+    }
+    form {
+      width: 15%;
+      input {
+        height: 50px;
+        font-size: .8em;
+        &::placeholder {
+          color: $white;
+          opacity: .5;
+        }
+      }
+    }
+    a {
+      width: 15%;
+      font-size: .75em;
+      height: 50px;
+    }
+  }
+  .donation-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  background-color: $gray;
+  .image-container {
+    width: 50%;
+    height: 500px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    left: -5%;
+    transform: skewX(12deg);
+    .donation-image {
+      display: block;
+      object-fit: cover;
+      height: 100%;
+      transform: skewX(-12deg);
+      left: 0;
+    }
+  }
+  .donation-content {
+    display: flex;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 10%;
+    flex-direction: column;
+    width: 40%;
+  }
+  h1 {
+    text-align: left;
+    font-weight: 400;
+    font-size: 2em;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding-bottom: 5px;
+  }
+  p {
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color: $black-op;
+    line-height: 200%;
+    font-size: .9em;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    font-size: .8em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 300;
+    text-align: center;
+    color: $white;
+    background-color: $mint;
+    height: 35px;
+    margin-top: 10px;
+  }
+}
+}
