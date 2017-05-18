@@ -803,6 +803,9 @@
     display: block;
     -o-object-fit: cover;
        object-fit: cover;
+    -o-object-position: 0 0;
+       object-position: 0 0;
+    width: 120%;
     height: 100%;
     -webkit-transform: skewX(-12deg);
             transform: skewX(-12deg);

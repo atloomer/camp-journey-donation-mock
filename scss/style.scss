@@ -623,6 +623,8 @@ $black-op: rgba(0,
     .donation-image {
       display: block;
       object-fit: cover;
+      object-position: 0 0;
+      width: 120%;
       height: 100%;
       transform: skewX(-12deg);
       left: 0;
