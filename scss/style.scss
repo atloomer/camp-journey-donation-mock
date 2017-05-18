@@ -461,7 +461,7 @@ $black-op: rgba(0,
     padding: 100px 20%;
     h1 {
       font-weight: 400;
-      font-size: 2.5em;
+      font-size: 2em;
       margin: 0 0 30px 0;
     }
     p {
@@ -469,7 +469,7 @@ $black-op: rgba(0,
       font-family: 'Roboto', sans-serif;
       color: $black-op;
       line-height: 200%;
-      font-size: 1em;
+      font-size: .9em;
     }
   }
 }
@@ -507,7 +507,7 @@ $black-op: rgba(0,
     .header-content {
       top: 35%;
       h1 {
-        font-size: 3.3em;
+        font-size: 3em;
       }
       h2 {
         width: 30%;
@@ -592,7 +592,7 @@ $black-op: rgba(0,
       width: 15%;
       input {
         height: 50px;
-        font-size: .8em;
+        font-size: .6em;
         &::placeholder {
           color: $white;
           opacity: .5;
@@ -601,7 +601,7 @@ $black-op: rgba(0,
     }
     a {
       width: 15%;
-      font-size: .75em;
+      font-size: .7em;
       height: 50px;
     }
   }
@@ -614,7 +614,7 @@ $black-op: rgba(0,
   background-color: $gray;
   .image-container {
     width: 50%;
-    height: 500px;
+    height: 450px;
     display: block;
     position: relative;
     overflow: hidden;

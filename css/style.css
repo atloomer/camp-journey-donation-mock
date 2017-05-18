@@ -591,7 +591,7 @@
   }
   .about h1 {
     font-weight: 400;
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0 0 30px 0;
   }
   .about p {
@@ -599,7 +599,7 @@
     font-family: 'Roboto', sans-serif;
     color: rgba(0, 0, 0, 0.65);
     line-height: 200%;
-    font-size: 1em;
+    font-size: .9em;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -646,7 +646,7 @@
     top: 35%;
   }
   .header .header-content h1 {
-    font-size: 3.3em;
+    font-size: 3em;
   }
   .header .header-content h2 {
     width: 30%;
@@ -750,7 +750,7 @@
   }
   .donate-now-bar form input {
     height: 50px;
-    font-size: .8em;
+    font-size: .6em;
   }
   .donate-now-bar form input::-webkit-input-placeholder {
     color: #ffffff;
@@ -770,7 +770,7 @@
   }
   .donate-now-bar a {
     width: 15%;
-    font-size: .75em;
+    font-size: .7em;
     height: 50px;
   }
 
@@ -791,7 +791,7 @@
   }
   .donation-info .image-container {
     width: 50%;
-    height: 500px;
+    height: 450px;
     display: block;
     position: relative;
     overflow: hidden;
