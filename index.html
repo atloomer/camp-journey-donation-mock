@@ -14,11 +14,39 @@
 
 <body>
   
+<div class="donate-modal">
+  <div class="close-modal"><span></span></div>
+  <div class="modal-info"><img src="https://github.com/atloomer/atloomer.github.io/blob/master/img/donate-icon.png?raw=true"/>
+    <h1>Your donation goes towards creating a fun and memorable experience for children who have been touched by cancer.</h1>
+  </div>
+  <div class="modal-form-container">
+    <form>
+      <h2>Donation Amount</h2>
+      <input type="text" placeholder="Enter Your Amount"/>
+      <h2>Your Information</h2>
+      <div class="flex-input-container">
+        <input type="text" placeholder="Name"/>
+        <input type="text" placeholder="Email"/>
+      </div>
+      <h2>Credit Card Information</h2>
+      <div class="flex-input-container">
+        <input type="text" placeholder="Credit Card Number" disabled="disabled"/>
+        <input class="expiration-date" type="text" placeholder="MM/YY" disabled="disabled"/>
+        <input class="cvc" type="text" placeholder="CVC" disabled="disabled"/>
+      </div>
+      <div class="secure-message"><img src="https://github.com/atloomer/atloomer.github.io/blob/master/img/secure-icon.png?raw=true"/>
+        <p>Your information is protected by a verified SSL Certificate.</p>
+      </div>
+      <h2>Leave us a Message!</h2>
+      <textarea class="large-text-area" type="text" placeholder="Your Message"></textarea>
+    </form><a class="submit-donation-btn" href="#">Donate</a>
+  </div>
+</div>
 <div class="mobile-menu">
   <ul class="mobile-list">
     <li><a class="link-anim" href="#">About Us</a></li>
     <li><a class="link-anim" href="#">Volunteer</a></li>
-    <li><a class="link-anim" href="#">Donate</a></li>
+    <li><a class="link-anim donate-click" href="#">Donate</a></li>
     <li><a class="link-anim" href="#">Contact</a></li>
   </ul>
 </div><img class="background" src="https://scontent-sea1-1.xx.fbcdn.net/v/t31.0-8/11334167_1123030137713362_1807678511968149938_o.jpg?oh=2e3440f5d6490838d7b78499f148ccef&amp;oe=59772EA0"/>
@@ -30,7 +58,7 @@
       <ul>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Volunteer</a></li>
-        <li><a href="#">Donate</a></li>
+        <li><a class="donate-click" href="#">Donate</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
@@ -38,7 +66,7 @@
   <div class="header-content">
     <h1>Camp Journey</h1>
     <h2>Providing a community of hope for children and their families touched by cancer</h2>
-    <div class="link-container"><a class="donate-link" href="#">Donate Now</a><a href="#">Contact</a></div>
+    <div class="link-container"><a class="donate-link donate-click" href="#">Donate Now</a><a href="#">Contact</a></div>
   </div>
 </div>
 <div class="donate-now-bar">
@@ -55,7 +83,7 @@
   </div>
   <form>
     <input placeholder="Enter Amount"/>
-  </form><a href="#">Donate Amount</a>
+  </form><a class="donate-click" href="#">Donate Amount</a>
 </div>
 <div class="about">
   <h1>About Us</h1>

@@ -1,4 +1,186 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:300,400,500");
+.donate-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  left: -120%;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+  -webkit-transition: all .3s ease-in-Out;
+  transition: all .3s ease-in-Out;
+}
+.donate-modal .close-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  margin: 5px;
+  width: 3em;
+  height: 3em;
+  right: 0;
+  cursor: pointer;
+}
+.donate-modal .close-modal span {
+  position: absolute;
+  display: block;
+  width: 2em;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.65);
+  margin: 0 auto;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.donate-modal .close-modal span:after {
+  position: relative;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: inherit;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.donate-modal .modal-info {
+  background-color: #edeeef;
+  display: block;
+  height: auto;
+  width: 100%;
+  padding: 60px 0;
+}
+.donate-modal .modal-info img {
+  display: block;
+  width: 7em;
+  margin: 0 auto;
+}
+.donate-modal .modal-info h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 1em;
+  width: 80%;
+  padding: 0 10%;
+  text-align: center;
+  margin: 30px 0 0 0;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 200%;
+}
+.donate-modal .modal-form-container {
+  width: 90%;
+  padding: 50px 5%;
+  display: block;
+}
+.donate-modal .modal-form-container form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 50px;
+}
+.donate-modal .modal-form-container form h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  padding-top: 25px;
+  color: rgba(0, 0, 0, 0.65);
+}
+.donate-modal .modal-form-container form input,
+.donate-modal .modal-form-container form textarea {
+  width: 90%;
+  padding: 10px;
+  font-size: .8em;
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: 300;
+  margin-bottom: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.donate-modal .modal-form-container form textarea {
+  min-height: 50px;
+}
+.donate-modal .modal-form-container form .expiration-date,
+.donate-modal .modal-form-container form .cvc {
+  width: 5em;
+}
+.donate-modal .modal-form-container form .secure-message {
+  width: 100%;
+  padding: 10px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.donate-modal .modal-form-container form .secure-message img {
+  height: 1em;
+  padding-right: 10px;
+}
+.donate-modal .modal-form-container form .secure-message p {
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: .8em;
+  font-weight: 300;
+  margin: 0;
+}
+.donate-modal .modal-form-container .submit-donation-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 125px;
+  padding: 10px 0;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: .8em;
+  background-color: #6bc097;
+  border: 1px solid #ffffff;
+}
+
+.open-modal {
+  left: 0%;
+}
+
 .mobile-menu {
   background-color: #6bc097;
   display: block;
@@ -603,6 +785,155 @@
   }
 }
 @media screen and (min-width: 1000px) {
+  .donate-modal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .donate-modal .close-modal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    margin: 20px;
+    width: 3em;
+    height: 3em;
+    right: 0;
+    cursor: pointer;
+  }
+  .donate-modal .close-modal span {
+    position: absolute;
+    display: block;
+    width: 2em;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.65);
+    margin: 0 auto;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .donate-modal .close-modal span:after {
+    position: relative;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: inherit;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .donate-modal .modal-info {
+    background-color: #edeeef;
+    min-height: 100%;
+    width: 35%;
+    padding: 0;
+    position: fixed;
+  }
+  .donate-modal .modal-info img {
+    margin-top: 40%;
+    display: block;
+    width: 12em;
+  }
+  .donate-modal .modal-info h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    width: 80%;
+    padding: 0 10%;
+    text-align: center;
+    margin: 60px 0 0 0;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 200%;
+  }
+  .donate-modal .modal-form-container {
+    width: 60%;
+    height: 100%;
+    padding: 10px 2.5% 0 2.5%;
+    display: block;
+    margin-left: 35%;
+  }
+  .donate-modal .modal-form-container form {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 0;
+  }
+  .donate-modal .modal-form-container form .flex-input-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+  .donate-modal .modal-form-container form h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    padding-top: 25px;
+    color: rgba(0, 0, 0, 0.65);
+  }
+  .donate-modal .modal-form-container form input,
+  .donate-modal .modal-form-container form textarea {
+    width: 35%;
+    padding: 10px;
+    font-size: .8em;
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 300;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .donate-modal .modal-form-container form .large-text-area {
+    width: 60%;
+    min-height: 100px;
+  }
+  .donate-modal .modal-form-container form .expiration-date,
+  .donate-modal .modal-form-container form .cvc {
+    width: 5em;
+  }
+  .donate-modal .modal-form-container form .secure-message img {
+    height: 1em;
+    padding-right: 10px;
+  }
+  .donate-modal .modal-form-container form .secure-message p {
+    font-family: 'Roboto', sans-serif;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: .8em;
+    font-weight: 300;
+    margin: 0;
+  }
+  .donate-modal .modal-form-container .submit-donation-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    right: 5%;
+    font-size: 1em;
+    width: 150px;
+  }
+
   .header {
     height: 80vh;
   }

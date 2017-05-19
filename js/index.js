@@ -5,6 +5,14 @@ $(".mobile-nav-btn").on("click", function() {
   $(".link-anim").toggleClass("display-links");
 });
 
+$('.donate-click').on('click', function() {
+  $('.donate-modal').addClass('open-modal');
+});
+
+$('.close-modal').on('click', function(){
+  $('.donate-modal').removeClass('open-modal');
+});
+
 // Quick donate
 $(".checkbox").click(function() {
   $('.checkbox').not(this).removeClass("checked");

@@ -13,6 +13,155 @@ $black-op: rgba(0,
 0,
 0,
 .65);
+$light-gray: rgba(0,
+0,
+0,
+0.1);
+.donate-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $white;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  left: -120%;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+  transition: all .3s ease-in-Out;
+  .close-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: 5px;
+    width: 3em;
+    height: 3em;
+    right: 0;
+    cursor: pointer;
+    span {
+      position: absolute;
+      display: block;
+      width: 2em;
+      height: 1px;
+      background-color: $black-op;
+      margin: 0 auto;
+      transform: rotate(45deg);
+      &:after {
+        position: relative;
+        display: block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: inherit;
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .modal-info {
+    background-color: $gray;
+    display: block;
+    height: auto;
+    width: 100%;
+    padding: 60px 0;
+    img {
+      display: block;
+      width: 7em;
+      margin: 0 auto;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 1em;
+      width: 80%;
+      padding: 0 10%;
+      text-align: center;
+      margin: 30px 0 0 0;
+      color: $black-op;
+      line-height: 200%;
+    }
+  }
+  .modal-form-container {
+    width: 90%;
+    padding: 50px 5%;
+    display: block;
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 50px;
+      h2 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5em;
+        font-weight: 300;
+        padding-top: 25px;
+        color: $black-op;
+      }
+      input,
+      textarea {
+        width: 90%;
+        padding: 10px;
+        font-size: .8em;
+        color: $black-op;
+        font-weight: 300;
+        margin-bottom: 5px;
+        border: 1px solid $light-gray;
+        outline: none;
+      }
+      textarea {
+        min-height: 50px;
+      }
+      .expiration-date,
+      .cvc {
+        width: 5em;
+      }
+      .secure-message {
+        width: 100%;
+        padding: 10px 0 0 0;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        img {
+          height: 1em;
+          padding-right: 10px;
+        }
+        p {
+          font-family: 'Roboto', sans-serif;
+          color: $black-op;
+          font-size: .8em;
+          font-weight: 300;
+          margin: 0;
+        }
+      }
+    }
+    .submit-donation-btn {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      width: 125px;
+      padding: 10px 0;
+      color: $white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: .8em;
+      background-color: $mint;
+      border: 1px solid $white;
+    }
+  }
+}
+
+.open-modal {
+  left: 0%;
+}
+
 .mobile-menu {
   background-color: $mint;
   display: block;
@@ -403,59 +552,57 @@ $black-op: rgba(0,
       }
     }
   }
-  
   .donation-info {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 90%;
-  padding: 100px 5%;
-  background-color: $gray;
-  .image-container {
-    display: none;
-    .donation-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    padding: 100px 5%;
+    background-color: $gray;
+    .image-container {
       display: none;
+      .donation-image {
+        display: none;
+      }
+    }
+    .donation-content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 60%;
+      padding: 20px 20%;
+    }
+    h1 {
+      text-align: left;
+      font-weight: 400;
+      font-size: 2em;
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      padding-bottom: 5px;
+    }
+    p {
+      text-align: left;
+      font-family: 'Roboto', sans-serif;
+      color: $black-op;
+      line-height: 200%;
+      font-size: .9em;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 150px;
+      font-size: .7em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 300;
+      text-align: center;
+      color: $white;
+      background-color: $mint;
+      height: 35px;
+      margin-top: 50px;
     }
   }
-  .donation-content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 60%;
-    padding: 20px 20%;
-  }
-  h1 {
-    text-align: left;
-    font-weight: 400;
-    font-size: 2em;
-    font-family: 'Playfair Display', serif;
-    margin: 0;
-    padding-bottom: 5px;
-  }
-  p {
-    text-align: left;
-    font-family: 'Roboto', sans-serif;
-    color: $black-op;
-    line-height: 200%;
-    font-size: .9em;
-  }
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 150px;
-    font-size: .7em;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 300;
-    text-align: center;
-    color: $white;
-    background-color: $mint;
-    height: 35px;
-    margin-top: 50px;
-  }
-}
-  
   .about {
     width: 60%;
     padding: 100px 20%;
@@ -475,7 +622,129 @@ $black-op: rgba(0,
 }
 
 @media screen and (min-width:1000px) {
-    .header {
+  .donate-modal {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    .close-modal {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      margin: 20px;
+      width: 3em;
+      height: 3em;
+      right: 0;
+      cursor: pointer;
+      span {
+        position: absolute;
+        display: block;
+        width: 2em;
+        height: 1px;
+        background-color: $black-op;
+        margin: 0 auto;
+        transform: rotate(45deg);
+        &:after {
+          position: relative;
+          display: block;
+          content: '';
+          width: 100%;
+          height: 1px;
+          background-color: inherit;
+          transform: rotate(90deg);
+        }
+      }
+    }
+    .modal-info {
+      background-color: $gray;
+      min-height: 100%;
+      width: 35%;
+      padding: 0;
+      position: fixed;
+      img {
+        margin-top: 40%;
+        display: block;
+        width: 12em;
+      }
+      h1 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 400;
+        font-size: 1.2em;
+        width: 80%;
+        padding: 0 10%;
+        text-align: center;
+        margin: 60px 0 0 0;
+        color: $black-op;
+        line-height: 200%;
+      }
+    }
+    .modal-form-container {
+      width: 60%;
+      height: 100%;
+      padding: 10px 2.5% 0 2.5%;
+      display: block;
+      margin-left: 35%;
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0;
+        .flex-input-container {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+        }
+        h2 {
+          font-family: 'Roboto', sans-serif;
+          font-size: 1.5em;
+          font-weight: 300;
+          padding-top: 25px;
+          color: $black-op;
+        }
+        input,
+        textarea {
+          width: 35%;
+          padding: 10px;
+          font-size: .8em;
+          color: $black-op;
+          font-weight: 300;
+          margin-bottom: 5px;
+          margin-right: 20px;
+          border: 1px solid $light-gray;
+        }
+        .large-text-area {
+          width: 60%;
+          min-height: 100px;
+        }
+        .expiration-date,
+        .cvc {
+          width: 5em;
+        }
+        .secure-message {
+          img {
+            height: 1em;
+            padding-right: 10px;
+          }
+          p {
+            font-family: 'Roboto', sans-serif;
+            color: $black-op;
+            font-size: .8em;
+            font-weight: 300;
+            margin: 0;
+          }
+        }
+      }
+      .submit-donation-btn {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        position: absolute;
+        right: 5%;
+        font-size: 1em;
+        width: 150px;
+      }
+    }
+  }
+  .header {
     height: 80vh;
     .nav-bar {
       width: 70%;
@@ -538,7 +807,7 @@ $black-op: rgba(0,
       }
     }
   }
-    .donate-now-bar {
+  .donate-now-bar {
     width: 70%;
     height: 90px;
     margin-top: -45px;
@@ -606,67 +875,67 @@ $black-op: rgba(0,
     }
   }
   .donation-info {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  padding: 0;
-  background-color: $gray;
-  .image-container {
-    width: 50%;
-    height: 450px;
-    display: block;
-    position: relative;
-    overflow: hidden;
-    left: -5%;
-    transform: skewX(12deg);
-    .donation-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    background-color: $gray;
+    .image-container {
+      width: 50%;
+      height: 450px;
       display: block;
-      object-fit: cover;
-      object-position: 0 0;
-      width: 120%;
-      height: 100%;
-      transform: skewX(-12deg);
-      left: 0;
+      position: relative;
+      overflow: hidden;
+      left: -5%;
+      transform: skewX(12deg);
+      .donation-image {
+        display: block;
+        object-fit: cover;
+        object-position: 0 0;
+        width: 120%;
+        height: 100%;
+        transform: skewX(-12deg);
+        left: 0;
+      }
+    }
+    .donation-content {
+      display: flex;
+      justify-content: center;
+      padding-left: 5%;
+      padding-right: 10%;
+      flex-direction: column;
+      width: 40%;
+    }
+    h1 {
+      text-align: left;
+      font-weight: 400;
+      font-size: 2em;
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      padding-bottom: 5px;
+    }
+    p {
+      text-align: left;
+      font-family: 'Roboto', sans-serif;
+      color: $black-op;
+      line-height: 200%;
+      font-size: .9em;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 150px;
+      font-size: .8em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 300;
+      text-align: center;
+      color: $white;
+      background-color: $mint;
+      height: 35px;
+      margin-top: 10px;
     }
   }
-  .donation-content {
-    display: flex;
-    justify-content: center;
-    padding-left: 5%;
-    padding-right: 10%;
-    flex-direction: column;
-    width: 40%;
-  }
-  h1 {
-    text-align: left;
-    font-weight: 400;
-    font-size: 2em;
-    font-family: 'Playfair Display', serif;
-    margin: 0;
-    padding-bottom: 5px;
-  }
-  p {
-    text-align: left;
-    font-family: 'Roboto', sans-serif;
-    color: $black-op;
-    line-height: 200%;
-    font-size: .9em;
-  }
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 150px;
-    font-size: .8em;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 300;
-    text-align: center;
-    color: $white;
-    background-color: $mint;
-    height: 35px;
-    margin-top: 10px;
-  }
-}
 }

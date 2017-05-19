@@ -1,3 +1,28 @@
+.donate-modal
+  .close-modal
+    span
+  .modal-info
+    img(src="https://github.com/atloomer/atloomer.github.io/blob/master/img/donate-icon.png?raw=true")
+    h1 Your donation goes towards creating a fun and memorable experience for children who have been touched by cancer.
+  .modal-form-container
+    form
+      h2 Donation Amount
+      input(type="text" placeholder="Enter Your Amount")
+      h2 Your Information
+      .flex-input-container
+        input(type="text" placeholder="Name")
+        input(type="text" placeholder="Email")
+      h2 Credit Card Information
+      .flex-input-container
+        input(type="text" placeholder="Credit Card Number" disabled)
+        input.expiration-date(type="text" placeholder="MM/YY" disabled)
+        input.cvc(type="text" placeholder="CVC" disabled)
+      .secure-message
+        img(src="https://github.com/atloomer/atloomer.github.io/blob/master/img/secure-icon.png?raw=true")
+        p Your information is protected by a verified SSL Certificate.
+      h2 Leave us a Message!
+      textarea.large-text-area(type="text" placeholder="Your Message")
+    a(href="#").submit-donation-btn Donate
 .mobile-menu
   ul.mobile-list
     li
@@ -5,7 +30,7 @@
     li
       a.link-anim(href="#") Volunteer
     li
-      a.link-anim(href="#") Donate
+      a.link-anim.donate-click(href="#") Donate
     li
       a.link-anim(href="#") Contact
 img.background(src="https://scontent-sea1-1.xx.fbcdn.net/v/t31.0-8/11334167_1123030137713362_1807678511968149938_o.jpg?oh=2e3440f5d6490838d7b78499f148ccef&oe=59772EA0")
@@ -21,14 +46,14 @@ img.background(src="https://scontent-sea1-1.xx.fbcdn.net/v/t31.0-8/11334167_1123
         li
           a(href="#") Volunteer
         li
-          a(href="#") Donate
+          a.donate-click(href="#") Donate
         li
           a(href="#") Contact
   .header-content
     h1 Camp Journey
     h2 Providing a community of hope for children and their families touched by cancer
     .link-container
-      a.donate-link(href="#") Donate Now
+      a.donate-link.donate-click(href="#") Donate Now
       a(href="#") Contact
 .donate-now-bar
   .quick-donate-title
@@ -42,7 +67,7 @@ img.background(src="https://scontent-sea1-1.xx.fbcdn.net/v/t31.0-8/11334167_1123
     p $100
   form
     input(placeholder="Enter Amount")
-  a(href="#") Donate Amount
+  a.donate-click(href="#") Donate Amount
 .about
   h1 About Us
   p Dealing with childhood cancer can sometimes make “just being a kid” seem out of reach—and out of scope for the whole family. At Camp Journey, our goal is to change that perception and that reality. In this nurturing, medically supervised home-away-from-home, young cancer survivors can leave their worries behind for one magical week and immerse themselves in a fun-filled outdoor camp experience tailored expressly to their needs. Meanwhile, their families and caregivers can rest easy, knowing that trained oncology staff is on-site 24/7.
