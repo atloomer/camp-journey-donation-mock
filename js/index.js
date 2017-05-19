@@ -7,10 +7,12 @@ $(".mobile-nav-btn").on("click", function() {
 
 $('.donate-click').on('click', function() {
   $('.donate-modal').addClass('open-modal');
+  $('.modal-info').addClass('open-modal-sidebar');
 });
 
 $('.close-modal').on('click', function(){
   $('.donate-modal').removeClass('open-modal');
+  $('.modal-info').removeClass('open-modal-sidebar');
 });
 
 // Quick donate
