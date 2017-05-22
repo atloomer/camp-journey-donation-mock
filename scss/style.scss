@@ -44,6 +44,7 @@ $light-gray: rgba(0,
     height: 3em;
     right: 0;
     cursor: pointer;
+    z-index: 99999999;
     span {
       position: absolute;
       display: block;
@@ -69,12 +70,74 @@ $light-gray: rgba(0,
     height: auto;
     width: 100%;
     padding: 60px 0;
-    img {
+    transition: all .3s ease-in-Out;
+    svg {
       display: block;
       width: 7em;
       margin: 0 auto;
     }
-    h1 {
+    
+    .heart {
+      fill: none;
+    }
+    
+    .fill-heart {
+      animation: heart .5s cubic-bezier(0.3, 0, 0, 1.35);
+      animation-delay: .8s;
+      animation-fill-mode: forwards; 
+    }
+    
+    .dollar-body {
+      transform: translateY(0px);
+      stroke: $mint;
+      transition: all .5s cubic-bezier(0.3, 0, 0, 1.35);
+      transition-delay: .3s;
+    }
+    
+    .dollar-body-animate {
+      height: 43.6px;
+      transform: translateY(41px);
+    }
+    
+    .dollar-corner {
+      transform: translateY(0px);
+      transition: all .5s cubic-bezier(0.3, 0, 0, 1.35);
+      transition-delay: .3s;
+    }
+    
+    .dollar-corner-animate {
+      transform: translateY(41px);
+    }
+    
+    .dollar-head {
+      transition: all .3s cubic-bezier(0.3, 0, 0, 1.35);
+      transition-delay: .3s;
+    }
+    
+    .dollar-head-animate {
+      opacity: 0;
+    }
+    
+    @keyframes heart {
+      
+      0% {
+        fill: none;
+        stroke-width: 5px;
+      }
+      
+      50% {
+        fill: $mint;
+        stroke-width: 10px;
+      }
+      
+      100% {
+        fill: $mint;
+        stroke-width: 5px;
+      }
+      
+    }
+    
+    .donate-heading {
       font-family: 'Playfair Display', serif;
       font-weight: 400;
       font-size: 1em;
@@ -86,10 +149,23 @@ $light-gray: rgba(0,
       line-height: 200%;
     }
   }
+  .thank-you-full-width {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .modal-form-container {
     width: 90%;
     padding: 50px 5%;
     display: block;
+    transition: all .3 ease-in-Out;
     form {
       width: 100%;
       display: flex;
@@ -155,6 +231,11 @@ $light-gray: rgba(0,
       background-color: $mint;
       border: 1px solid $white;
     }
+  }
+  .modal-form-container-hide {
+    width: 0;
+    height: 0;
+    overflow: hidden;
   }
 }
 
@@ -668,7 +749,7 @@ $light-gray: rgba(0,
       position: fixed;
       z-index: 99999;
       transition: all .2s ease-in-Out;
-      img {
+      svg {
         margin-top: 0;
         display: block;
         width: 12em;
@@ -685,6 +766,18 @@ $light-gray: rgba(0,
         line-height: 200%;
       }
     }
+    .thank-you-full-width {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
     
     .open-modal-sidebar {
       left: 0;

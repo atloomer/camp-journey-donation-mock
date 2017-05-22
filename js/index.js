@@ -22,3 +22,15 @@ $(".checkbox").click(function() {
   $('.checkbox').not(this).removeClass("checked");
   $(this).toggleClass("checked");
 });
+
+
+// Thank you animation
+$('.submit-donation-btn').on('click', function(){
+  $('.modal-form-container').addClass('modal-form-container-hide');
+  $('.modal-info').addClass('thank-you-full-width');
+  $('.dollar-body').addClass('dollar-body-animate');
+  $('.dollar-corner').addClass('dollar-corner-animate');
+  $('.dollar-head').addClass('dollar-head-animate');
+  $('.heart').addClass('fill-heart');
+  $('.donate-heading').html('Thank You!');
+});
