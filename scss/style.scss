@@ -338,14 +338,8 @@ $light-gray: rgba(0,
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    h3 {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1em;
-      font-weight: 300;
-      text-transform: uppercase;
-      background-color: $mint;
-      color: $white;
-      padding: .5em 1em;
+    img {
+      width: 3em;
     }
     .desk-nav {
       display: none;

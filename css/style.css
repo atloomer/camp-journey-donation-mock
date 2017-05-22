@@ -424,14 +424,8 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.header .nav-bar h3 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1em;
-  font-weight: 300;
-  text-transform: uppercase;
-  background-color: #6bc097;
-  color: #ffffff;
-  padding: .5em 1em;
+.header .nav-bar img {
+  width: 3em;
 }
 .header .nav-bar .desk-nav {
   display: none;
