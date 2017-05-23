@@ -32,5 +32,5 @@ $('.submit-donation-btn').on('click', function(){
   $('.dollar-corner').addClass('dollar-corner-animate');
   $('.dollar-head').addClass('dollar-head-animate');
   $('.heart').addClass('fill-heart');
-  $('.donate-heading').html('Thank You!');
+  $('.donate-heading').html('Thank You!').css('font-size', '2em');
 });
