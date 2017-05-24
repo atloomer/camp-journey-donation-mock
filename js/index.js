@@ -5,6 +5,14 @@ $(".mobile-nav-btn").on("click", function() {
   $(".link-anim").toggleClass("display-links");
 });
 
+$(".link-anim").on("click", function(){
+  $(".mobile-menu").removeClass('open-mobile-menu');
+  $('.mobile-nav-btn').removeClass("close-btn");
+  $(".mobile-menu").removeClass("open-mobile-menu");
+  $(".mobile-list").removeClass("display-ul");
+  $(".link-anim").removeClass("display-links");
+});
+
 $('.donate-click').on('click', function() {
   $('.donate-modal').addClass('open-modal');
   $('.modal-info').addClass('open-modal-sidebar');
@@ -41,3 +49,22 @@ var year = today.getFullYear();
 
 // Set or display year
 $('.current-year').text(year);
+
+// SMOOTH SCROLLING
+
+$(function() {
+  $('.smoothScroll').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 400);
+        return false;
+      }
+    }
+  });
+});
+
+// END SMOOTH SCROLLING
