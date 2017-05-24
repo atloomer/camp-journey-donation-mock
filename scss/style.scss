@@ -17,6 +17,12 @@ $light-gray: rgba(0,
 0,
 0,
 0.1);
+body {
+::selection {
+  background-color: $mint;
+  color: $white;
+  }
+}
 .donate-modal {
   display: flex;
   flex-direction: column;

@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:300,400,500");
+body ::-moz-selection {
+  background-color: #6bc097;
+  color: #ffffff;
+}
+body ::selection {
+  background-color: #6bc097;
+  color: #ffffff;
+}
+
 .donate-modal {
   display: -webkit-box;
   display: -ms-flexbox;
