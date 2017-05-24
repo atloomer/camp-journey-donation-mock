@@ -743,7 +743,313 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 500px;
+  width: 90%;
+  padding: 100px 5%;
+  background-color: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.volunteer h1 {
+  margin: 0;
+  text-align: left;
+  font-weight: 400;
+  font-size: 2em;
+  font-family: 'Playfair Display', serif;
+  padding-bottom: 5px;
+}
+.volunteer p {
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 160%;
+  font-size: .9em;
+  padding-bottom: 30px;
+}
+.volunteer .volunteer-positions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  border-top: 5px solid #6bc097;
+}
+.volunteer .volunteer-positions .position {
+  width: 90%;
+  padding: 20px 5%;
+  border-left: 1px solid #edeeef;
+  border-right: 1px solid #edeeef;
+  border-bottom: 1px solid #edeeef;
+}
+.volunteer .volunteer-positions .position h3 {
+  margin: 0;
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.25em;
+  font-family: 'Playfair Display', serif;
+  padding-bottom: 5px;
+}
+.volunteer .volunteer-positions .position p {
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 160%;
+  font-size: .8em;
+  padding-bottom: 30px;
+}
+.volunteer .apply-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150px;
+  font-size: .7em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 300;
+  text-align: center;
+  color: #ffffff;
+  background-color: #6bc097;
+  height: 35px;
+  margin-top: 50px;
+}
+
+.quote-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 100px 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-image: url("https://github.com/atloomer/atloomer.github.io/blob/master/img/forest.jpg?raw=true");
+  background-size: cover;
+  background-position: center;
+}
+.quote-container .quote-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.quote-container .quote-contents h2 {
+  font-family: 'Roboto', sans-serif;
+  line-height: 160%;
+  font-size: 1.1em;
+  font-weight: 300;
+  margin: 0;
+  color: #ffffff;
+  text-align: center;
+}
+.quote-container .quote-contents .green-seperator {
+  width: 3em;
+  margin: 25px 0;
+  height: 5px;
+  background-color: #6bc097;
+}
+.quote-container .quote-contents h3 {
+  font-family: 'Playfair Display', serif;
+  line-height: 160%;
+  font-size: 1.1em;
+  font-weight: 300;
+  margin: 0;
+  color: #ffffff;
+  text-align: center;
+}
+.quote-container .quote-contents h4 {
+  font-family: 'Roboto', sans-serif;
+  line-height: 160%;
+  font-size: .8em;
+  font-weight: 300;
+  margin: 0;
+  color: #ffffff;
+  text-align: center;
+}
+.quote-container .quote-mark {
+  width: 1.5em;
+  padding: 0 10px;
+}
+
+.contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  padding: 100px 5%;
+  background-color: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contact-container h1 {
+  margin: 0;
+  text-align: left;
+  font-weight: 400;
+  font-size: 2em;
+  font-family: 'Playfair Display', serif;
+  padding-bottom: 5px;
+}
+.contact-container .contact-info {
+  width: 100%;
+  display: block;
+  padding-bottom: 20px;
+}
+.contact-container .contact-info p {
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 160%;
+  font-size: .9em;
+  padding-bottom: 15px;
+}
+.contact-container .contact-info p span {
+  color: #6bc097;
+  padding-right: 5px;
+}
+.contact-container .contact-form-container {
+  width: 100%;
+  display: block;
+}
+.contact-container .contact-form-container form {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contact-container .contact-form-container form input,
+.contact-container .contact-form-container form textarea {
+  margin: 20px 0;
+  padding: 5px 0;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  outline: none;
+  border-bottom: 2px solid #edeeef;
+  font-family: 'Roboto', sans-serif;
+  font-size: .8em;
+}
+.contact-container .contact-form-container form textarea {
+  height: 80px;
+}
+.contact-container .contact-form-container .send-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150px;
+  font-size: .7em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 300;
+  text-align: center;
+  color: #ffffff;
+  background-color: #6bc097;
+  height: 35px;
+  margin-top: 50px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 2px solid #edeeef;
+  width: 90%;
+  padding: 15px 5%;
+  background-color: #ffffff;
+}
+footer h4 {
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: 300;
+  line-height: 160%;
+  font-size: .7em;
+  padding-left: 5px;
+}
+footer .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .logo img {
+  height: 1.5em;
+}
+footer .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -881,6 +1187,35 @@
     color: rgba(0, 0, 0, 0.65);
     line-height: 200%;
     font-size: .9em;
+  }
+
+  .volunteer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60%;
+    padding: 100px 20%;
+  }
+
+  .quote-container .left-quote {
+    padding: 0 10px 0 20%;
+  }
+  .quote-container .right-quote {
+    padding: 0 20% 0 10px;
+  }
+
+  .contact-container {
+    width: 60%;
+    padding: 100px 20%;
+  }
+
+  footer {
+    width: 60%;
+    padding: 15px 20%;
+  }
+  footer h4 {
+    font-size: 1em;
+    padding-left: 10px;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -1333,5 +1668,97 @@
     background-color: #6bc097;
     height: 35px;
     margin-top: 10px;
+  }
+
+  .volunteer {
+    width: 80%;
+    padding: 100px 10%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .volunteer h1 {
+    text-align: center;
+    font-size: 2em;
+  }
+  .volunteer p {
+    text-align: center;
+    line-height: 200%;
+    width: 60%;
+    font-size: .9em;
+  }
+  .volunteer .volunteer-positions {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 90%;
+  }
+  .volunteer .volunteer-positions .position {
+    width: 25%;
+    padding: 30px 10px 20px 10px;
+  }
+  .volunteer .volunteer-positions .position h3 {
+    font-weight: 400;
+    font-size: 1.25em;
+  }
+  .volunteer .volunteer-positions .position p {
+    line-height: 160%;
+    font-size: .7em;
+    padding-bottom: 30px;
+    width: 100%;
+  }
+  .volunteer .apply-link {
+    font-size: .8em;
+  }
+
+  .quote-container {
+    padding: 200px 0;
+  }
+  .quote-container .quote-contents h2 {
+    font-size: 1.3em;
+  }
+  .quote-container .quote-contents h3 {
+    font-size: 1.3em;
+  }
+  .quote-container .quote-contents h4 {
+    font-size: .8em;
+  }
+  .quote-container .quote-mark {
+    width: 2.5em;
+  }
+
+  .contact-container {
+    width: 80%;
+    padding: 100px 10%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contact-container h1 {
+    font-weight: 400;
+    font-size: 1.5em;
+  }
+  .contact-container .contact-info {
+    width: 50%;
+    display: block;
+    padding-bottom: 20px;
+  }
+  .contact-container .contact-form-container {
+    width: 50%;
+    display: block;
+  }
+  .contact-container .contact-form-container .send-message {
+    font-size: .8em;
+    width: 120px;
+  }
+
+  footer {
+    width: 80%;
+    padding: 15px 10%;
+  }
+  footer h4 {
+    font-size: .9em;
   }
 }

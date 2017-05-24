@@ -34,3 +34,10 @@ $('.submit-donation-btn').on('click', function(){
   $('.heart').addClass('fill-heart');
   $('.donate-heading').html('Thank You!').css('font-size', '2em');
 });
+
+// Get date
+var today = new Date();
+var year = today.getFullYear();
+
+// Set or display year
+$('.current-year').text(year);
