@@ -623,7 +623,18 @@ body {
         color: $black-op;
         line-height: 160%;
         font-size: .8em;
-        padding-bottom: 30px;
+        padding-bottom: 0;
+      }
+      ul {
+        padding: 0 0 20px 40px;
+        margin: 0;
+        li {
+          text-align: left;
+          font-family: 'Roboto', sans-serif;
+          color: $black-op;
+          line-height: 160%;
+          font-size: .8em;
+        }
       }
     }
   }
@@ -1307,9 +1318,19 @@ footer {
         p {
           line-height: 160%;
           font-size: .7em;
-          padding-bottom: 30px;
           width: 100%;
         }
+        ul {
+        padding: 0 0 20px 30px;
+        margin: 0;
+        li {
+          text-align: left;
+          font-family: 'Roboto', sans-serif;
+          color: $black-op;
+          line-height: 160%;
+          font-size: .7em;
+        }
+      }
       }
     }
     .apply-link {

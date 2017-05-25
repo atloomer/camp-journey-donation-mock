@@ -814,7 +814,18 @@ body ::selection {
   color: rgba(0, 0, 0, 0.65);
   line-height: 160%;
   font-size: .8em;
-  padding-bottom: 30px;
+  padding-bottom: 0;
+}
+.volunteer .volunteer-positions .position ul {
+  padding: 0 0 20px 40px;
+  margin: 0;
+}
+.volunteer .volunteer-positions .position ul li {
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 160%;
+  font-size: .8em;
 }
 .volunteer .apply-link {
   display: -webkit-box;
@@ -1714,8 +1725,18 @@ footer .date {
   .volunteer .volunteer-positions .position p {
     line-height: 160%;
     font-size: .7em;
-    padding-bottom: 30px;
     width: 100%;
+  }
+  .volunteer .volunteer-positions .position ul {
+    padding: 0 0 20px 30px;
+    margin: 0;
+  }
+  .volunteer .volunteer-positions .position ul li {
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 160%;
+    font-size: .7em;
   }
   .volunteer .apply-link {
     font-size: .8em;
