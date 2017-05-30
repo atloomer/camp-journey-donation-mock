@@ -396,7 +396,7 @@ body {
     display: flex;
     position: absolute;
     left: 0;
-    top: 40%;
+    top: 35%;
     align-items: center;
     flex-direction: column;
     width: 90%;
@@ -404,7 +404,7 @@ body {
     h1 {
       color: $white;
       font-family: 'Playfair Display', serif;
-      font-size: 2.1em;
+      font-size: 1.8em;
       text-transform: uppercase;
       text-align: center;
       margin: 0;
@@ -413,7 +413,7 @@ body {
     h2 {
       color: $white;
       font-family: 'Playfair Display', serif;
-      font-size: 1em;
+      font-size: .8em;
       line-height: 150%;
       font-weight: 400;
       text-align: center;
@@ -829,6 +829,7 @@ footer {
         font-size: 3.3em;
       }
       h2 {
+        font-size: 1em;
         width: 30%;
       }
       .link-container {
