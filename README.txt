@@ -1,3 +1,5 @@
-A Pen created at CodePen.io. You can find this one at http://codepen.io/atloomer/pen/xdJQXJ.
+Site developed by Alex Loomer.
+Design theme inspiration provided by uxui services.
+Images available upon request (currently linked externally).
 
  
