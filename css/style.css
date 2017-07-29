@@ -1561,7 +1561,7 @@ footer .date {
   .donate-now-bar .quick-donate-options .checked {
     background-color: #6bc097;
     border: 1px solid #6bc097;
-    background-image: url("http://www.harshath.com/glass-tester/icons/check.png");
+    background-image: url("../img/checkMark.png");
     background-position: center;
     background-size: 90%;
   }
